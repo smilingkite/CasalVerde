@@ -31,4 +31,10 @@ Rails.application.routes.draw do
       resources :paragraphs, except: [:show, :edit, :new]
     end
   end
+
+  namespace :api do
+    resources :pages
+    resources :bookings
+  end
+
 end
