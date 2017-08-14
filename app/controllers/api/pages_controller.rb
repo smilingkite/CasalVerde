@@ -30,6 +30,30 @@ class Api::PagesController < ApplicationController
     end
   end
 
+  def destroy
+    page = Page.find(params[:id])
+    page.destroy
+
+    render status: 200, json: {
+      message: "Page deleted"
+    }.to_json
+  end
+
+  def update
+    page = Page.find(params[:id])
+    if page.update(page_params)
+      render status: 200, json: {
+        message: "Page updated",
+        page: page
+      }.to_json
+    else
+      render status: 422, json: {
+        message: "The page could not be updated",
+        errors: page.errors
+      }.to_json
+    end
+  end
+
   private
 
   def page_params
