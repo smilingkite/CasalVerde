@@ -1,4 +1,5 @@
 <footer>
+  <div class="wrapper">
   <div class="column one">
 <strong>Cas'al Verde</strong><br>
 Strade di Tregole 79 <br>
@@ -7,7 +8,22 @@ Castellina in Chianti <br>
 +31 6 510 697 87
 </div>
   <div class="column two">
+    <nav>
+      <ul>
+        <li><%= link_to "Book Now", new_booking_path %></li>
+        <li><%= link_to "Pricing", prices_pages_path %></li>
+        <li><%= link_to "Reviews", reviews_path %></li>
+        <li><%= link_to "Gallery", photogallery_pages_path %></li>
+        <% Page.all.each do |page|%>
+          <% if page.name != "home_page" && page.hidden != true %>
+
+            <li>  <%= link_to page.name, page_path(page) %></li>
+          <% end %>
+        <% end %>
+      </ul>
+    </nav>
   </div>
   <div class="column three">
   </div>
+</div>
 </footer>
