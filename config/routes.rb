@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   resources :reviews
 
   resources :photos
-  resources :booking, only: :new
-  resources :bookings, only: %i[new create show] do
+  resources :bookings, only: %i[new create show], as: :bookings do
     get :taken, on: :collection
   end
 
