@@ -1,5 +1,6 @@
 class Api::PagesController < ApplicationController
   skip_before_action :verify_authenticity_token
+
   def index
     render status: 200, json: {
       pages: Page.all

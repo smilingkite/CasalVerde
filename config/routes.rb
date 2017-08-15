@@ -33,8 +33,11 @@ Rails.application.routes.draw do
   end
 
   namespace :api do
-    resources :pages
-    resources :bookings
+    resources :pages do
+      resources :paragraphs
+    end
+
+    # resources :bookings
   end
 
 end
