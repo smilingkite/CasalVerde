@@ -1,10 +1,20 @@
 <div class="carousel-container">
-    <div class="carousel">
-        <% @carousel.photos.order(:id).each do |photo| %>
+    <!-- <div class="carousel"> -->
+        <!-- <% @carousel.photos.order(:id).each do |photo| %>
         <figure>
             <%= image_tag(photo.image_url(:standard)) %>
         </figure>
-        <% end %>
+        <% end %> -->
+    <!-- </div> -->
+    <div class="video">
+      <video id="vid" width="850" height="450" video autobuffer autoplay >
+      <source id="mp4" src="http://res.cloudinary.com/liss/video/upload/v1502741234/Casal_Verde_vanuit_de_lucht_mzsnqd.mp4" type="video/mp4" >
+      </video>
+    </div>
+
+
+    <div class="BookingForm">
+      <%= react_component 'BookingForm' %>
     </div>
 </div>
 
