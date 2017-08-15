@@ -36,6 +36,17 @@ before_filter :set_page
     end
   end
 
+  def destroy
+    paragraph = @page.paragraphs.find(params[:id])
+    paragraph.destroy
+
+    render status: 200, json: {
+      message: "paragraph  deleted",
+      page: @page,
+      paragraph: paragraph
+    }.to_json
+  end
+
   private
 
   def set_page
