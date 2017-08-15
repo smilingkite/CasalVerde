@@ -1,18 +1,18 @@
 # frozen_string_literal: true
-Rails.application.routes.draw do
 
+Rails.application.routes.draw do
   root to: 'pages#index'
 
   devise_for :users
 
-  resources :pages, only: [:index, :show] do
+  resources :pages, only: %i[index show] do
     get :photogallery, on: :collection
     get :prices, on: :collection
   end
   resources :reviews
 
   resources :photos
-  resources :bookings, only: [:new, :create, :show] do
+  resources :bookings, only: %i[new create show] do
     get :taken, on: :collection
   end
 
@@ -23,12 +23,12 @@ Rails.application.routes.draw do
   namespace :admin do
     get '/', to: 'panel#index'
     get '/past_bookings', to: 'bookings#past', as: 'past_bookings'
-    resources :prices, except: [:show, :new]
-    resources :bookings, only: [:index, :update, :delete]
-    resources :reviews, only: [:index, :destroy]
-    resources :photos, except: [:show, :edit, :new]
-    resources :pages, except: [:show, :edit, :new] do
-      resources :paragraphs, except: [:show, :edit, :new]
+    resources :prices, except: %i[show new]
+    resources :bookings, only: %i[index update delete]
+    resources :reviews, only: %i[index destroy]
+    resources :photos, except: %i[show edit new]
+    resources :pages, except: %i[show edit new] do
+      resources :paragraphs, except: %i[show edit new]
     end
   end
 
@@ -36,8 +36,8 @@ Rails.application.routes.draw do
     resources :pages do
       resources :paragraphs
     end
+    resources :photos
 
     # resources :bookings
   end
-
 end
