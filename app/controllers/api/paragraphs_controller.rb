@@ -20,6 +20,22 @@ before_filter :set_page
     end
   end
 
+  def update
+    paragraph = @page.paragraphs.find(params[:id])
+    if paragraph.update(paragraph_params)
+      render status: 200, json: {
+        message: "paragraph  updated",
+        page: @page,
+        paragraph: paragraph
+      }.to_json
+    else
+      render status: 422, json: {
+        message: "paragraph could not be updated",
+        errors: paragraph.errors
+      }.to_json
+    end
+  end
+
   private
 
   def set_page
