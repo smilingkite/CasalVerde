@@ -1,19 +1,24 @@
 <div class="header-container">
     <div class="header-content-inner">
-      <h1>Cas'al Verde</h1>
-      <hr>
-      <p>Tranquility, natural beauty, privacy in the heart of the famous Chianti region in Tuscany</p>
+      <video id="vid" video autobuffer autoplay >
+       <source id="mp4" src="http://res.cloudinary.com/liss/video/upload/v1502741234/Casal_Verde_vanuit_de_lucht_mzsnqd.mp4" type="video/mp4" >
+      </video>
+        <div id="videoText">
+          <h1>Cas'al Verde</h1>
+          <p id="subTitle">Tranquility, natural beauty, privacy in the heart of the famous Chianti region in Tuscany</p>
+          <a id="bookButton" href="http://www.casalverde.eu/boek-direct1">Book Now</a>
+        </div>
     </div>
-    <div class="BookingForm">
-      <%= react_component 'BookingForm' %>
-    </div>
-</div>
 
-<div class="content">
+    <div class="BookingForm">
+    </div>
+
+
+<!-- <div class="content">
     <div class="home-text-container">
         <div class="home-text-wrapper home-text-hidden" id="home-text-wrapper">
             <% @paragraphs.each do |p| %>
-            <div>
+            <div>ra
                 <h3 class="home_heading"><%= p.heading if p.heading != nil %></h3>
                 <p><%= p.text%></p>
             </div>
@@ -21,7 +26,7 @@
         </div>
         <a href="#" id="readmore" class="readmore">read more ></a>
     </div>
-</div>
+</div> -->
 
 
 

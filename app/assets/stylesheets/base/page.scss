@@ -25,7 +25,7 @@ body {
 	min-height: 50px;
 	text-align: center;
 	color: #fff;
-	background-image: asset-data-url("header.jpg");
+	// background-image: asset-data-url("header.jpg");
 	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -80,4 +80,39 @@ footer {
 	text-align: center;
 	background-color: $base-dark;
 	color: white;
+}
+
+video {
+    position: fixed;
+    left: 50%;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+	  background-size: cover;
+	  transition: 1s opacity;
+}
+.stopfade {
+   opacity: .5;
+}
+
+h1 {
+  font-size: 3rem;
+	font-family: $font-body;
+	opacity: 0.5;
+  // text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+
+#subTitle {
+	opacity: 0.3;
+}
+
+#bookButton {
+	// opacity: 0.5;
+	transition: 0.1s background;
+}
+
+a:hover{
+	opacity: 0.5;
+  // background:rgba(0,0,0,0.9);
 }
