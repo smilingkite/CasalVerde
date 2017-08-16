@@ -11,6 +11,7 @@ class PagesController < ApplicationController
 
   def show
     @page = Page.find(params[:id])
+    # @name = @page.name
     @paragraphs = @page.paragraphs.all
   end
 
