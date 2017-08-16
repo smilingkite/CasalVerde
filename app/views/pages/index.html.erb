@@ -1,29 +1,17 @@
 <div class="header-container">
     <div class="header-content-inner">
-      <h1>Cas'al Verde</h1>
-      <hr>
-      <p>Tranquility, natural beauty, privacy in the heart of the famous Chianti region in Tuscany</p>
-    </div>
-    <!-- <div class="BookingForm">
-      <%= react_component 'BookingForm' %>
-    </div> -->
-</div>
+      <div class="videoContainer">
+            <video id="vid" video autobuffer autoplay >
+              <source id="mp4" src="http://res.cloudinary.com/liss/video/upload/v1502741234/Casal_Verde_vanuit_de_lucht_mzsnqd.mp4" type="video/mp4" >
+            </video>
 
-<div class="content">
-    <div class="home-text-container">
-        <div class="home-text-wrapper home-text-hidden" id="home-text-wrapper">
-            <% @paragraphs.each do |p| %>
-            <div>
-                <h3 class="home_heading"><%= p.heading if p.heading != nil %></h3>
-                <p><%= p.text%></p>
-            </div>
-            <% end %>
-        </div>
-        <a href="#" id="readmore" class="readmore">read more ></a>
+            <div class="overlay">
+              <h1>Cas'al Verde</h1>
+               <p id="subTitle">Tranquility, natural beauty, privacy in the heart of the famous Chianti region in Tuscany</p>
+             </div>
+           </div>
     </div>
 </div>
-
-
 
 <div class="reviews-container">
   <div class="reviews-wrapper">

@@ -8,12 +8,16 @@ Castellina in Chianti <br>
 +31 6 510 697 87
 </div>
   <div class="column two">
-    <nav>
+    <strong>Useful links</strong><br>
+        <% Page.all.each do |page|%>
+          <% if page.name != "home_page" && page.hidden != true %>
+            <ul><%= link_to page.name, page_path(page) %></ul>
+          <% end %>
+        <% end %>
+
+    <!-- <nav>
+      <p>USEFUL LINKS</p>
       <ul>
-        <li><%= link_to "Book Now", new_booking_path %></li>
-        <li><%= link_to "Pricing", prices_pages_path %></li>
-        <li><%= link_to "Reviews", reviews_path %></li>
-        <li><%= link_to "Gallery", photogallery_pages_path %></li>
         <% Page.all.each do |page|%>
           <% if page.name != "home_page" && page.hidden != true %>
 
@@ -21,7 +25,7 @@ Castellina in Chianti <br>
           <% end %>
         <% end %>
       </ul>
-    </nav>
+    </nav> -->
   </div>
   <div class="column three">
     <div class="service-box">
