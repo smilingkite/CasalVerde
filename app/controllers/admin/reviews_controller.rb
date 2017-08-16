@@ -4,6 +4,7 @@ class Admin::ReviewsController < Admin::BaseController
   def index
     @reviews = Review.all.order(:created_at)
     @review = Review.new
+    render json: @reviews
   end
 
   # DELETE /admin/prices/:id
