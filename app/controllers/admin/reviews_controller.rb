@@ -10,7 +10,10 @@ class Admin::ReviewsController < Admin::BaseController
   # DELETE /admin/prices/:id
   def destroy
     @review = Review.find(params[:id])
-    render json: @review.destroy
-    redirect_to admin_reviews_path
+    @review.destroy
+
+    render status: 200, json: {
+      message: "Review deleted"
+    }.to_json
   end
 end
