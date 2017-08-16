@@ -1,5 +1,14 @@
 .booking-container {
 	position: relative;
+	a:link {
+    background-color: #6bae63;
+		color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+		border: 2px solid;
+		border-radius: 25px;
+}
 }
 
 .bookingtrigger {
@@ -53,7 +62,7 @@
 		margin-top: 45px;
 
 		:focus {
-			outline: 1px solid #6f8561;
+			outline: 1px solid #6bae63;
 		}
 	}
 

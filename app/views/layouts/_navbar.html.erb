@@ -19,8 +19,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
-                  <%= render 'layouts/modal' %>
+                <li class="booking-container">
+                  <div class="BookNow">
+                    <%= link_to "Book Now", new_booking_path %>
+                  </div>
                 </li>
                 <li>
                     <%= link_to "Pricing", prices_pages_path %>
