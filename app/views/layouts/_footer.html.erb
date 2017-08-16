@@ -9,23 +9,13 @@ Castellina in Chianti <br>
 </div>
   <div class="column two">
     <strong>Useful links</strong><br>
+    <ul>
         <% Page.all.each do |page|%>
           <% if page.name != "home_page" && page.hidden != true %>
-            <ul><%= link_to page.name, page_path(page) %></ul>
-          <% end %>
-        <% end %>
-
-    <!-- <nav>
-      <p>USEFUL LINKS</p>
-      <ul>
-        <% Page.all.each do |page|%>
-          <% if page.name != "home_page" && page.hidden != true %>
-
-            <li>  <%= link_to page.name, page_path(page) %></li>
+            <li><%= link_to page.name, page_path(page) %></li>
           <% end %>
         <% end %>
       </ul>
-    </nav> -->
   </div>
   <div class="column three">
     <div class="service-box">
