@@ -45,7 +45,7 @@ skip_before_filter :authenticate_user!
     page = Page.find(params[:id])
     page.destroy
     render status: 200, json: {
-      message: "Review deleted"
+      message: "page deleted"
     }.to_json
 
     # if page.destroy
