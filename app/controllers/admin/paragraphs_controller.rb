@@ -1,5 +1,5 @@
 class Admin::ParagraphsController < Admin::BaseController
-skip_before_filter :authenticate_user!
+  skip_before_filter :authenticate_user!
   def index
     @paragraphs = Paragraph.all.order(id: :asc)
     @page = Page.find(params[:page_id])
@@ -15,11 +15,11 @@ skip_before_filter :authenticate_user!
     if @paragraph.save
       # redirect_to admin_page_paragraphs_path
       render status: 201, json: {
-        message: "paragraph created",
+        message: 'paragraph created',
         paragraph: paragraph
       }.to_json
     else
-      render "index"
+      # render "index"
       render status: 422, json: {
         errors: paragraph.errors
       }.to_json
@@ -32,7 +32,7 @@ skip_before_filter :authenticate_user!
     if paragraph.update(paragraph_params)
       # redirect_to admin_page_paragraphs_path
       render status: 201, json: {
-        message: "paragraph updated",
+        message: 'paragraph updated',
         paragraph: paragraph
       }.to_json
     else
@@ -47,8 +47,9 @@ skip_before_filter :authenticate_user!
     @paragraph = Paragraph.find(params[:id])
     @page = Page.find(params[:page_id])
     @paragraph.destroy
+
     render status: 200, json: {
-      message: "paragraph deleted"
+      message: 'paragraph deleted'
     }.to_json
 
     # if @paragraph.destroy
