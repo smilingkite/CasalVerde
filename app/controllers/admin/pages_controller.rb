@@ -1,5 +1,6 @@
 class Admin::PagesController < Admin::BaseController
 skip_before_filter :authenticate_user!
+
   def index
     @pages = Page.order(:id)
     @homepage = Page.find_by(name: "home_page")

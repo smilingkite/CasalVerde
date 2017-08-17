@@ -1,5 +1,6 @@
 class PricesController < ApplicationController
 
+
   def calculate_price
     price = Price.total_price(params["price"]["checkin"].to_date, params["price"]["checkout"].to_date, (params["price"]["guests"]).to_i)
 
