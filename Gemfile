@@ -24,6 +24,7 @@ gem 'faker'
 gem 'devise'
 gem 'react-rails', '~> 2.2'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development do
   gem 'guard'
