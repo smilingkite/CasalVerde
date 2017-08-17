@@ -42,7 +42,11 @@ class Admin::BookingsController < Admin::BaseController
     booking = Booking.find(params[:id])
     booking.destroy
     # head :no_content
-    redirect_to admin_bookings_path
+
+    render status: 200, json: {
+      message: "Review deleted"
+    }.to_json
+    # redirect_to admin_bookings_path
   end
 
   private

@@ -23,12 +23,13 @@ Rails.application.routes.draw do
   namespace :admin do
     get '/', to: 'panel#index'
     get '/past_bookings', to: 'bookings#past', as: 'past_bookings'
-    resources :prices, except: %i[show new]
-    resources :bookings, only: %i[index update delete]
+
+    resources :prices
+    resources :bookings, only: %i[index update destroy]
     resources :reviews, only: %i[index destroy]
-    resources :photos, except: %i[show edit new]
-    resources :pages, except: %i[show edit new] do
-      resources :paragraphs, except: %i[show edit new]
+    resources :photos
+    resources :pages do
+      resources :paragraphs
     end
   end
 
