@@ -7,8 +7,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 gem 'carrierwave', '0.11.2'
 gem 'cloudinary'
 gem 'coffee-rails', '~> 4.2'
