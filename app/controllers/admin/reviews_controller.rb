@@ -1,5 +1,5 @@
 class Admin::ReviewsController < Admin::BaseController
-
+skip_before_filter :authenticate_user!
   # GET /admin/prices
   def index
     @reviews = Review.all.order(:created_at)

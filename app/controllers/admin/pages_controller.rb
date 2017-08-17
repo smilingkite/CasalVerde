@@ -1,9 +1,11 @@
 class Admin::PagesController < Admin::BaseController
+skip_before_filter :authenticate_user!
   def index
-    @pages = Page.all.order(:id)
+    @pages = Page.order(:id)
+
     @homepage = Page.find_by(name: "home_page")
     @photos = Photo.all
-    @page = Page.new
+    render json: {pages: @pages, photos: @photos}
   end
 
   def create
