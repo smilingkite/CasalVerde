@@ -2,10 +2,9 @@ class Admin::PagesController < Admin::BaseController
 skip_before_filter :authenticate_user!
   def index
     @pages = Page.order(:id)
-
     @homepage = Page.find_by(name: "home_page")
     @photos = Photo.all
-    render json: {pages: @pages, photos: @photos}
+    render json: @pages
   end
 
   def create
@@ -13,9 +12,16 @@ skip_before_filter :authenticate_user!
     @page.hidden = true
 
     if @page.save
-      redirect_to admin_pages_path
+      # redirect_to admin_pages_path
+      render status: 201, json: {
+        message: "page created",
+        page: page
+      }.to_json
     else
-      render :index
+      # render :index
+      render status: 422, json: {
+        errors: page.errors
+      }.to_json
     end
   end
 
@@ -23,21 +29,30 @@ skip_before_filter :authenticate_user!
     page = Page.find(params[:id])
 
     if page.update(page_params)
-      redirect_to admin_pages_path
+      # redirect_to admin_pages_path
+      render status: 201, json: {
+        message: "page updated",
+        page: page
+      }.to_json
     else
-      render :index
-
+      render status: 422, json: {
+        errors: page.errors
+      }.to_json
     end
   end
 
   def destroy
     page = Page.find(params[:id])
+    page.destroy
+    render status: 200, json: {
+      message: "page deleted"
+    }.to_json
 
-    if page.destroy
-      redirect_to admin_pages_path
-    else
-      redirect_to admin_pages_path
-    end
+    # if page.destroy
+    #   redirect_to admin_pages_path
+    # else
+    #   redirect_to admin_pages_path
+    # end
   end
 
   def edit
