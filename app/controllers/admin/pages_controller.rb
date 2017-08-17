@@ -4,7 +4,7 @@ skip_before_filter :authenticate_user!
     @pages = Page.order(:id)
     @homepage = Page.find_by(name: "home_page")
     @photos = Photo.all
-    render json: {pages: @pages, photos: @photos}
+    render json: @pages
   end
 
   def create
