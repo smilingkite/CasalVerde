@@ -4,6 +4,8 @@ class Admin::BookingsController < Admin::BaseController
     @bookings_last = Booking.last_checked_out
     @bookings_reserved = Booking.reserved_bookings
     @bookings_confirmed = Booking.confirmed_bookings
+    @bookings = Booking.all
+    render json: @bookings
   end
 
   def past
