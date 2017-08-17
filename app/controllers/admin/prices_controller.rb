@@ -1,9 +1,11 @@
 class Admin::PricesController < Admin::BaseController
+  skip_before_filter :authenticate_user!
 
   # GET /admin/prices
   def index
     @prices = Price.all.order(:start_date)
     @price = Price.new
+    render json: @prices
   end
 
   # GET /admin/prices/:id
