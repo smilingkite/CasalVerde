@@ -1,5 +1,21 @@
 .booking-container {
 	position: relative;
+
+	a {
+		background-color: #6bae63;
+		color: white;
+		padding: 10px 20px;
+		text-align: center;
+		display: inline-block;
+		border: 2px solid;
+		border-radius: 25px;
+	}
+
+	a:hover, a:focus{
+		color: white;
+		text-decoration: none;
+	}
+
 }
 
 .bookingtrigger {
@@ -8,6 +24,7 @@
 	border-radius: 15px;
 	background-color: $base-color;
 	text-align: center;
+
 	a {
 		color: white;
 		font-size: 14px;
@@ -53,7 +70,7 @@
 		margin-top: 45px;
 
 		:focus {
-			outline: 1px solid #6f8561;
+			outline: 1px solid #6bae63;
 		}
 	}
 
@@ -89,18 +106,22 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
+
 		.input-modal {
 			width: 50%;
 		}
+
 		input {
 			width: 100%;
 			padding-left: 7px;
 			margin-bottom: 5px;
 		}
+
 		.buttons-modal {
 			width: 40%;
 			display: flex;
 		}
+
 		.people_button_modal {
 			width: 25px;
 		}

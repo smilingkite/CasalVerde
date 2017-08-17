@@ -22,9 +22,14 @@
 }
 
 .reviews-container {
-    margin-top: 50px;
-    width: 100%;
-    background-color: $light-base-color;
+    background-color: white;
+    display: inline-block;
+  width:100%;
+  margin: 5px;
+  border: 1px solid #d85454;
+  height: 25vw;
+  text-align: center;
+  position:relative;
 }
 
 .reviews-wrapper {
@@ -38,11 +43,14 @@
     color: white;
     width: calc(100%/3);
     padding: 30px;
-    background-color: $base-color;
+    background-color: white;
+    color: black;
+
 }
 
 .reviews-item:nth-child(2) {
-    background-color: $light-base-color;
+    background-color: white;
+    color: black;
 }
 
 .reviews-header {
@@ -51,13 +59,4 @@
 
 .reviews-body {
     text-align: center;
-}
-
-.prices-container {
-  display: flex;
-  flex-wrap: wrap;
-  .well {
-    width: 300px;
-    margin: 10px;
-  }
 }

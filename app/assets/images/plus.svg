@@ -3,12 +3,12 @@
     <style>
       .cls-1 {
         fill: rgba(111,133,97,0.2);
-        stroke: #6f8561;
+        stroke: #6bae63;
         stroke-width: 2px;
       }
 
       .cls-2 {
-        fill: #6f8561;
+        fill: #6bae63;
       }
 
       .cls-3 {

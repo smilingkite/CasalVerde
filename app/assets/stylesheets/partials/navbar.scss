@@ -8,12 +8,11 @@
 	text-transform: uppercase;
 	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 	font-weight: 700;
-	color: #f05f40;
 }
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
-	color: #eb3812;
-}
+// .navbar-default .navbar-header .navbar-brand:hover,
+// .navbar-default .navbar-header .navbar-brand:focus {
+// 	// color: #eb3812;
+// }
 
 .navbar {
 	width: 100%;
@@ -37,7 +36,11 @@
 		display: inline-block;
 		padding: 5px;
 		margin: 0 10px;
+
 	}
+	// .BookingNow {
+	// 	color: white;
+	// }
 	.content {
 		padding: 10px;
 		display: flex;

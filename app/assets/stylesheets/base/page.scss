@@ -1,7 +1,3 @@
-* {
-	box-sizing: border-box;
-}
-
 body {
 	font-family: $font-body;
 	font-weight: $font-normal-weight;
@@ -25,17 +21,18 @@ body {
 	min-height: 50px;
 	text-align: center;
 	color: #fff;
-	background-image: asset-data-url("header.jpg");
 	background-position: center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
+
 	.header-content-inner {
 		font-family: $font-body;
 		padding: 100px 15px;
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 2em;
+
 		p {
 			font-family: $font-logo;
 			font-weight: 300;
@@ -43,6 +40,55 @@ body {
 			font-size: 0.7em;
 			opacity: 0.8;
 		}
+	}
+}
+
+.videoContainer {
+	position: relative;
+
+	.container video {
+		position: relative;
+		z-index: 0;
+	}
+
+	.overlay {
+		background: rgba(0,0,0,0);
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.overlay h1 {
+		color: white;
+		font-family: 'Nobile', sans-serif;
+		font-size: 3em;
+		text-align: center;
+	}
+
+	video {
+		left: 50%;
+		z-index: -100;
+		background-size: cover;
+		transition: 1s opacity;
+	}
+
+	.stopfade {
+		opacity: 0.5;
+	}
+
+	.overlay p {
+		opacity: 0.3;
+		color: white;
+	}
+
+	a:hover {
+		opacity: 0.5;
+		// background:rgba(0,0,0,0.9);
 	}
 }
 
@@ -66,39 +112,49 @@ body {
 	text-align: center;
 }
 
-figure {
-	margin: 0;
-
-	img {
-		width: 100%;
-	}
-}
-
 footer {
-	width: 100%;
-	padding: 40px 0;
-	text-align: center;
-	background-color: $base-dark;
+	font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+	font-weight: 100;
 	color: white;
-	.wrapper {
-		 max-width: $content-width;
-		 margin: 0 auto;
-		 display: flex;
-		 flex-wrap: wrap;
-	 ul li {
-		 list-style: none;
-		 margin: 0;
-		 padding: 0;
-	 }
-	 .bookingtrigger a {
-		 text-transform: capitalize;
-	 }
- }
-	.column {
-	    color: white;
-	    width: calc(100%/3);
-	    padding: 30px;
-	    background-color: $base-dark;
+	padding: 2rem;
+	width: 100%;
+	margin: 2rem;
+	float: right;
+	font-size: 1.2rem;
 
+	.wrapper {
+		max-width: $content-width;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.bookingtrigger a {
+			text-transform: capitalize;
+		}
+	}
+
+	.column {
+		color: black;
+		width: calc(100%/3);
+		padding: 30px;
+		background-color: #DCDCDC;
+
+		a:link,
+		a:visited {
+			color: black;
+			text-align: center;
+			text-decoration: none;
+		}
 	}
 }
