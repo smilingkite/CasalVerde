@@ -25,30 +25,29 @@ class Price < ApplicationRecord
     # else min num people is 4
     # extra_people * weekly_price * number_of_weeks
     # min_num_people => from input || db
-    extra_people = people - 8
+    # @saturdays_only = Price.saturdays_only
+    extra_people = if saturdays_only?(checkin)
+                     people - 8
+                   else
+                     people - 4
+               end
+
     total_price = 0
 
-    (checkin..checkout).each do |date|
-      total_price += Price.price_at_week(date, extra_people) unless date == checkout
-    end
+    weeks = (checkout - checkin).to_i / 7
+    total_price = weeks * Price.price_at_week(checkin, extra_people)
+    # (checkin..checkout).each do |date|
+    # total_price += Price.price_at_week(date, extra_people) unless date == checkout
+    # end
     total_price
   end
 
-  # def self.price_week()
-  # calculate price?
   def self.price_at_week(date, extra_people)
     price = Price.where('start_date <= ? AND end_date >= ?', date, date).last
     total = price.weekly_price
     total += price.extra_price * extra_people if extra_people > 0
     total
   end
-
-  # def self.price_at_day(date, extra_people)
-  #   price = Price.where('start_date <= ? AND end_date >= ?', date, date).last
-  #   total = price.weekly_price
-  #   total += price.extra_price * extra_people if extra_people > 0
-  #   total
-  # end
 
   def self.saturdays_only?(check_in)
     price = Price.where('start_date <= ? AND end_date >= ?', check_in, check_in).last
