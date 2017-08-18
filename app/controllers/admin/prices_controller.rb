@@ -60,7 +60,7 @@ class Admin::PricesController < Admin::BaseController
 
   def price_params
     params.require(:price).permit(:start_date, :end_date, :min_days,
-                                  :nightly_price, :extra_price, :service_costs,
+                                  :weekly_price, :extra_price, :service_costs,
                                   :saturdays_only)
   end
 end
