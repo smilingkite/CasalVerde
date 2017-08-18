@@ -12,6 +12,7 @@ class Casalverde::Application
       resource '*',
         headers: :any,
         methods: [:get, :post, :delete, :put, :patch, :options, :head],
+        credentials: true,
         max_age: 0
     end
   end
