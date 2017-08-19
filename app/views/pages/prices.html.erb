@@ -1,4 +1,4 @@
-<% title "Price vacation villa in Toscane, Italy: Cas'al Verde" %>
+<% title "Kosten vakantie in in Toscane, Italie: Cas'al Verde" %>
 
 <div class="content">
   <h2 class="headings text-align">Prices</h2>
@@ -11,15 +11,16 @@
         </div>
         <% if price.saturdays_only %>
         <div class="well-row-group">
-          <span>Check in/out on Saturdays only</span>
+          <span>Aankomst en vertrek alleen op zaterdag. </span>
         </div>
         <% end %>
         <div class="well-divider"></div>
         <div class="well-column-group">
-          <div class="well-row"><span>Minimum nights:</span><span><%= price.min_days %><span></div>
-          <div class="well-row"><span>Nightly Price:</span><span><%= money(price.nightly_price) %></span></div>
-          <div class="well-row"><span>Price per extra person:</span><span><%= money(price.extra_price) %></span></div>
-          <div class="well-row"><span>Service costs:</span><span><%= money(price.service_costs) %></span></div>
+          <div class="well-row"><span>Minimaal aantal nachten:</span><span><%= price.min_days %><span></div>
+          <div class="well-row"><span>Weekprijs:</span><span><%= money(price.weekly_price) %></span></div>
+          <div class="well-row"><span>Extra gasten:</span><span><%= money(price.extra_price) %></span></div>
+          <div class="well-row"><span>Waarborg:</span><span><%= money(price.service_costs) %></span></div>
+          <div class="well-row"><span>Wisseldag:</span><span><%= price.saturdays_only ? "zaterdag" : "flexibel" %></span></div>
         </div>
       </div>
     <% end %>

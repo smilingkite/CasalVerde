@@ -1,5 +1,4 @@
 class Admin::ParagraphsController < Admin::BaseController
-  skip_before_filter :authenticate_user!
   def index
     @paragraphs = Paragraph.all.order(id: :asc)
     @page = Page.find(params[:page_id])

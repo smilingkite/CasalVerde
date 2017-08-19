@@ -1,34 +1,35 @@
 <div class="content">
-    <h1 class="headings text-align">Invoice</h1>
+    <h1 class="headings text-align">Overzicht</h1>
     <div class="invoice">
-        <p>Check in date:
+        <p>Aankomstdatum:
             <span><%= @booking.check_in %></span>
         </p>
-        <p>Check out date:
+        <p>Vertrekdatum:
             <span><%= @booking.check_out %></span>
         </p>
-        <p>Full name:
+        <p>Volledige naam:
             <span><%= @booking.first_name %></span>
             <span>
                 <%= @booking.last_name %></span>
         </p>
-        <p>Phone number:
+        <p>Telefoon:
             <span><%= @booking.phone %></span>
         </p>
-        <p>Adress:
+        <p>Adres:
             <span><%= @booking.street_name %></span>
             <span><%= @booking.street_number %></span>
         </p>
-        <p>City:
+        <p>Stad:
             <span><%= @booking.city %></span>,
             <span><%= @booking.zip_code %></span>
         </p>
-        <p>People:
+        <p>Aantal mensen:
             <span><%= @booking.people %></span>
         </p>
-        <p>Total price:
+        <p>Totale kosten:
             <span><%= money(@booking.total_price) %>
             </span>
         </p>
+        <p>(Inclusief waarborg: <span><%= money(500.00)%>)</span></p>
     </div>
 </div>

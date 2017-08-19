@@ -15,10 +15,10 @@
   </div>
   <div class="well-divider"></div>
   <div class="well-column-group">
-    <div class="well-row"><span>Number of people:</span><span><%= booking.people %></span></div>
-    <div class="well-row"><span>Number of days:</span><span><%= booking.number_of_days %></span></div>
-    <div class="well-row"><span>Confirmed:</span><span id="confirm-<%= booking.id%>"><%= booking.confirmed? ? "yes" : "no" %></span></div>
-    <div class="well-row"><span>Paid:</span><span id="pay-<%= booking.id %>"><%= booking.paid? ? "yes" : "no" %></span></div>
+    <div class="well-row"><span>Aantal gasten:</span><span><%= booking.people %></span></div>
+    <div class="well-row"><span>Aantal dagen:</span><span><%= booking.number_of_days %></span></div>
+    <div class="well-row"><span>Bevestigd:</span><span id="confirm-<%= booking.id%>"><%= booking.confirmed? ? "yes" : "no" %></span></div>
+    <div class="well-row"><span>Betaald:</span><span id="pay-<%= booking.id %>"><%= booking.paid? ? "yes" : "no" %></span></div>
   </div>
   <div class="well-divider"></div>
   <div class="well-column-group">

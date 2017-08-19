@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20170203143648) do
     t.date     "start_date"
     t.date     "end_date"
     t.integer  "min_days"
-    t.decimal  "nightly_price",  precision: 7, scale: 2
+    t.decimal  "weekly_price",   precision: 7, scale: 2
     t.decimal  "extra_price",    precision: 7, scale: 2
     t.datetime "created_at",                                             null: false
     t.datetime "updated_at",                                             null: false

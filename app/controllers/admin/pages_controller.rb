@@ -1,5 +1,4 @@
 class Admin::PagesController < Admin::BaseController
-skip_before_filter :authenticate_user!
 
   def index
     @pages = Page.order(:id)
