@@ -77,9 +77,9 @@ createbooking(Date.today.advance(months: 2), Date.today.advance(months: 2, weeks
 # Reviews
 Review.destroy_all
 
-Review.create!(name: 'Stefan', stars: 5, review: "It was the most impressive location I've ever been to.")
-Review.create!(name: 'Andrew', stars: 5, review: 'This was incredible.')
-Review.create!(name: 'Sander', stars: 4, review: 'Really cool place. Too bad the wifi was bad.')
-Review.create!(name: 'Thanos', stars: 4, review: 'Amazing. But not Greece.')
-Review.create!(name: 'Jeroen', stars: 5, review: 'Beautifully designed place.')
-Review.create!(name: 'Vincent', stars: 4, review: 'The bars in the area are great. Beautiful house as well.')
+Review.create!(name: 'Stefan', stars: 5, review: "Een indrukwekkende locatie en heerlijk eten.")
+Review.create!(name: 'Andrew', stars: 5, review: 'Fantastisch')
+Review.create!(name: 'Sander', stars: 4, review: 'Cool. Jammer dat de wifi het niet zo goed was.')
+Review.create!(name: 'Thanos', stars: 4, review: 'Prachtig, maar geen Griekenland.')
+Review.create!(name: 'Jeroen', stars: 5, review: 'Klassieke villa in een prachtige streek.')
+Review.create!(name: 'Vincent', stars: 4, review: 'De lokale service is goed en je kunt fijn wandelen.')
