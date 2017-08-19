@@ -1,10 +1,10 @@
 <div class="content">
     <h1 class="headings text-align">Overzicht</h1>
     <div class="invoice">
-        <p>Aankomstdatum:
+        <p>Incheckdatum:
             <span><%= @booking.check_in %></span>
         </p>
-        <p>Vertrekdatum:
+        <p>Uitcheckdatum:
             <span><%= @booking.check_out %></span>
         </p>
         <p>Volledige naam:
@@ -23,10 +23,10 @@
             <span><%= @booking.city %></span>,
             <span><%= @booking.zip_code %></span>
         </p>
-        <p>Aantal mensen:
+        <p>Aantal personen:
             <span><%= @booking.people %></span>
         </p>
-        <p>Totale kosten:
+        <p>Totaal prijs:
             <span><%= money(@booking.total_price) %>
             </span>
         </p>
