@@ -140,6 +140,9 @@ footer {
 	float: right;
 	font-size: 1.2rem;
 	background-color: #dcdcdc;
+	border: 1px solid #dcdcdc;
+	max-height: 9000px;
+	// min-height: 5em;
 
 	.wrapper {
 		max-width: $content-width;
