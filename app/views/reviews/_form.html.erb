@@ -1,21 +1,21 @@
 <%= form_for @review, id: "review_form",html:{ class: 'content_form short'} do |f| %>
 
 <div>
-    <label id="name_label">What is your name?</label>
+    <label id="name_label">Hoe heet u?</label>
     <%= f.text_field :name %>
 </div>
 
 <div>
-    <label id="star_label">How many stars would you give us?</label>
+    <label id="star_label">Hoeveel sterren zou u ons geven? </label>
     <%= f.select(:stars, options_for_select([['★', "1"], ['★★', "2"], ['★★★', "3"], ['★★★★', "4"], ['★★★★★', "5"]], "5")) %>
 </div>
 
 <div>
-    <label id="review_label">How would you describe your stay?</label>
+    <label id="review_label">Beschrijf je verblijf</label>
     <%= f.text_area :review %>
   </div>
 
-<button type="submit" name="button" class="submit">Enter review</button>
+<button type="submit" name="button" class="submit">Geef recensie</button>
 
 <% end %>
 

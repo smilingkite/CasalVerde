@@ -8,9 +8,9 @@ Castellina in Chianti <br>
 +31 6 510 697 87
 </div>
   <div class="column two">
-    <strong>Useful links</strong><br>
+    <strong>Nuttige links</strong><br>
     <ul>
-      <li><%= link_to "Book Now", new_booking_path %></li>
+      <li><%= link_to "Reserveer nu", new_booking_path %></li>
         <% Page.all.each do |page|%>
           <% if page.name != "home_page" && page.hidden != true %>
             <li><%= link_to page.name, page_path(page) %></li>
@@ -19,7 +19,7 @@ Castellina in Chianti <br>
       </ul>
   </div>
   <div class="column three">
-<strong>Follow us on</strong>
+<strong>Volg ons op:</strong>
     <div class="service-box">
 <div class="list-group">
   <ul>
