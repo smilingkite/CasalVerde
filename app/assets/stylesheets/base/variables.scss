@@ -3,6 +3,8 @@
 // rgba(34, 34, 34, .05)
 $base-color: #6bae63;
 $light-base-color: lighten($base-color, 10%);
+$dark-base-color: darken($base-color, 10%);
+$darker-base-color: darken($base-color, 20%);
 $warning-color: rgb(168, 105, 105);
 $base-dark: rgb(51, 51, 51);
 $font-body: Verdana, 'Helvetica Neue', Arial, sans-serif;

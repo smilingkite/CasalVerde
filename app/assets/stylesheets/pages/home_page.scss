@@ -9,25 +9,12 @@
 	transition: all 500ms ease-in-out;
 }
 
-// .home-text-hidden {
-//     max-height: 150px;
-//     overflow-y: hidden;
-// }
-
-// .readmore {
-// 	text-decoration: none;
-// 	margin-top: 25px;
-// 	display: inline-block;
-// 	color: $base-color;
-// }
-
 .reviews-container {
-	background-color: white;
+	background-color: $darker-base-color;
 	display: inline-block;
 	width: 100%;
-	margin: 5px;
-	border: 1px solid #d85454;
-	height: 25vw;
+	margin: 5px 0 0 0;
+	// border: 1px solid $dark-base-color;
 	text-align: center;
 	position: relative;
 }
@@ -40,15 +27,15 @@
 }
 
 .reviews-item {
-	color: white;
+	// color: white;
 	width: calc(100%/3);
 	padding: 30px;
-	background-color: white;
+	background-color: $dark-base-color;
 	color: black;
 }
 
 .reviews-item:nth-child(2) {
-	background-color: white;
+	background-color: $darker-base-color;
 	color: black;
 }
 
