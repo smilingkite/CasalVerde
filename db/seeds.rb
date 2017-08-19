@@ -20,10 +20,6 @@ photo3 = Photo.create(remote_image_url: 'https://res.cloudinary.com/casal/image/
 p1 = Paragraph.create(heading: 'Rust, natuurschoon, privacy in het hartje van het Chianti gebied in Toscane',
 text: 'Onze villa, gelegen op loopafstand van Tregole in het beroemde wijngebied van de Chianti Classico, beschikt over vijf royale slaapkamers en drie badkamers. De villa ligt centraal tussen wijngaarden, olijfbomen en bossen waardoor u in een gebied verblijft van privacy, rust en natuurschoon. In de tuin is een groot zwembad, een kinderspeelplaats, verschillende terrassen (met zon en schaduwplekken). Allen met een prachtig uitzicht! Wanneer u gezamenlijk wilt dineren kunt u de pizza-oven of de barbecue in de arcade gebruiken om heerlijke gerechten uit het lokale gebied klaar te maken, waarna u het kunt serveren op de lange Toscaanse tafel. De omgeving is veilig voor kinderen. Deze luxe locatie is geschikt voor maximaal 16 personen en beschikt over faciliteiten die het verblijf een stuk leuker en gemakkelijk maken. ', page: home_page)
 
-p2 = Paragraph.create(text: 'Het op loopafstand gelegen Tregole is een klein gehucht zonder winkels, maar de nabij gelegen steden, zoals Castellina in Chianti, Siena en Florence zijn goed te bereiken met de auto of de fiets. Afstanden: Tregole 500m, Castellina in Chianti (onder meer supermarkt, restaurants, bars, dokter, apotheek, kerk) 3km, San Gimignano 22km, Siena 24km, Florence 35km', page: home_page)
-
-p3 = Paragraph.create(text: 'Qua mountainbiken en wielrennen is deze omgeving perfect: prachtige wegen, afwisselende klims en mooie vergezichten gecombineerd met historische dorpjes en steden. De buren, Brancaia en Fonterutoli, verkopen één van de beste wijnen van Italië, die waarschijnlijk goed zullen aansluiten bij het zelf klaargemaakte diner. Mocht u zelf niet willen koken; onze beheerder is gediplomeerd kok. Met hem kunt u afspraken maken over een Toscaanse kookworkshop, een pizza-avond of zelfs een gehele lokale maaltijd laten verzorgen.', page: home_page)
-
 # Admin User
 User.destroy_all
 User.create!(email: 'admin@example.com', password: 'foobar', password_confirmation: 'foobar')
