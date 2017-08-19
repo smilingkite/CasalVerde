@@ -1,5 +1,4 @@
 class Admin::PhotosController < Admin::BaseController
-  skip_before_filter :authenticate_user!
 
   def index
     @photos = Photo.all.order(:id)
