@@ -68,36 +68,20 @@ body {
 		opacity: 0.6;
 		color: white;
 		font-size: 5.0em;
-		font-family: Verdana;
+		font-family: $font-body;
 	}
 
 	.overlay p {
 		opacity: 0.3;
 		color: white;
-		font-family: Verdana;
+		font-family: $font-body;
 		font-size: 1.0em;
 	}
 }
 
-// .content {
-// 	max-width: $content-width;
-// 	padding: 10px;
-// 	margin: 0 auto;
-// }
-
-// .headings {
-// 	color: $base-color;
-// 	text-transform: uppercase;
-// 	font-family: $font-title;
-// }
-//
 .star {
 	width: 10px;
 }
-
-// .text-align {
-// 	text-align: center;
-// }
 
 footer {
 	/* Wrapper */
@@ -118,30 +102,6 @@ footer {
 		user-select: none;
 		width: 3.6rem;
 	}
-	//
-	// /* Circle */
-	// .icon-button span {
-	// 	border-radius: 0;
-	// 	display: block;
-	// 	height: 0;
-	// 	left: 50%;
-	// 	margin: 0;
-	// 	position: absolute;
-	// 	top: 50%;
-	// 	-webkit-transition: all 0.3s;
-	// 	   -moz-transition: all 0.3s;
-	// 	     -o-transition: all 0.3s;
-	// 	        transition: all 0.3s;
-	// 	width: 0;
-	// }
-	// .icon-button:hover span {
-	// 	width: 3.6rem;
-	// 	height: 3.6rem;
-	// 	border-radius: 3.6rem;
-	// 	margin: -1.8rem;
-	// }
-
-	// /* Icons */
 	.icon-button i {
 		background: none;
 		color: white;
@@ -166,11 +126,6 @@ footer {
 	.icon-button .fa-map-marker {
 		color: red;
 	}
-	// .icon-button:hover .icon-twitter,
-	// .icon-button:hover .fa{
-	// // .icon-button:hover .icon-google-plus {
-	// 	color: white;
-	// }
 
 	font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
 	font-weight: 100;
