@@ -10,7 +10,7 @@ before_filter :set_page
       render status: 200, json: {
         message: "paragraph created",
         page: @page,
-        paragraph: paragraph
+        paragraph: @paragraph
       }.to_json
     else
       render status: 422, json: {
@@ -20,13 +20,13 @@ before_filter :set_page
     end
   end
 
-  def update
+  def put
     paragraph = @page.paragraphs.find(params[:id])
     if paragraph.update(paragraph_params)
       render status: 200, json: {
         message: "paragraph  updated",
         page: @page,
-        paragraph: paragraph
+        paragraph: @paragraph
       }.to_json
     else
       render status: 422, json: {
