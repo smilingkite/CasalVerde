@@ -1,3 +1,7 @@
+// * {
+// 	border: 1px solid red;
+// }
+
 body {
 	font-family: $font-body;
 	font-weight: $font-normal-weight;
@@ -12,7 +16,7 @@ body {
 
 	.page-body {
 		flex: 1;
-		padding-top: 2em;
+		padding-top: 4em;
 	}
 }
 
@@ -40,6 +44,14 @@ body {
 			text-transform: none;
 			font-size: 0.7em;
 			opacity: 0.8;
+		}
+	}
+
+	.content {
+		max-width: $content-width;
+		margin: 0 auto;
+		.booking {
+			text-align: center;
 		}
 	}
 }
@@ -130,11 +142,15 @@ footer {
 	font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
 	font-weight: 100;
 	color: white;
-	padding: 2rem;
+	padding: 2rem 0;
 	width: 100%;
-	margin: 2rem;
+	margin: 0;
 	float: right;
 	font-size: 1.2rem;
+	background-color: #dcdcdc;
+	border: 1px solid #dcdcdc;
+	max-height: 9000px;
+	// min-height: 5em;
 
 	.wrapper {
 		max-width: $content-width;

@@ -6,3 +6,11 @@
 @import "pages/module";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.content {
+	max-width: $content-width;
+	margin: 0 auto;
+	.booking {
+		max-width: 90em;
+	}
+}
