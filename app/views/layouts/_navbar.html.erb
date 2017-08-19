@@ -10,6 +10,7 @@
       </button>
       <div class="home-page">
         <%= link_to(root_path) do %>
+        <%= image_tag "logo-casalverde-small.png" %>
         <h1>Welkom bij Cas'al Verde</h1>
         <% end %>
       </div>
@@ -18,10 +19,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="booking-container">
-          <div class="BookNow">
+        <li class="book_now" >
             <%= link_to "Boek nu", new_booking_path %>
-          </div>
         </li>
         <li>
           <%= link_to "Kosten", prices_pages_path %>
