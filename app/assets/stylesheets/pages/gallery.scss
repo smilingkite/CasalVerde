@@ -1,11 +1,15 @@
 .instagram {
-    display: flex;
-    flex-wrap: wrap;
-    a {
-      padding: 10px;
-      max-width: calc(100%/3);
-      img {
-        width: 100%;
-      }
-    }
+	display: flex;
+	flex-wrap: wrap;
+	a {
+		padding: 10px;
+		max-width: calc(100%/3);
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.content img {
+	text-align: center;
 }

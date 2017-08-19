@@ -16,7 +16,7 @@ body {
 
 	.page-body {
 		flex: 1;
-		padding-top: 2em;
+		padding-top: 4em;
 	}
 }
 
@@ -44,6 +44,14 @@ body {
 			text-transform: none;
 			font-size: 0.7em;
 			opacity: 0.8;
+		}
+	}
+
+	.content {
+		max-width: $content-width;
+		margin: 0 auto;
+		.booking {
+			text-align: center;
 		}
 	}
 }
