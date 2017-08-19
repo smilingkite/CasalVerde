@@ -21,24 +21,14 @@ class Price < ApplicationRecord
   end
 
   def self.total_price(checkin, checkout, people = 8)
-    # if high season: min num of people is 8,
-    # else min num people is 4
-    # extra_people * weekly_price * number_of_weeks
-    # min_num_people => from input || db
-    # @saturdays_only = Price.saturdays_only
     extra_people = if saturdays_only?(checkin)
                      people - 8
                    else
                      people - 4
                end
 
-    total_price = 0
-
     weeks = (checkout - checkin).to_i / 7
-    total_price = weeks * Price.price_at_week(checkin, extra_people)
-    # (checkin..checkout).each do |date|
-    # total_price += Price.price_at_week(date, extra_people) unless date == checkout
-    # end
+    total_price = 500 + weeks * Price.price_at_week(checkin, extra_people)
     total_price
   end
 
