@@ -12,7 +12,7 @@ body {
 
 	.page-body {
 		flex: 1;
-		padding: 2em;
+		padding: 0;
 	}
 }
 
@@ -46,14 +46,14 @@ body {
 
 .videoContainer {
 	position: relative;
-
-	.container video {
-		position: relative;
-		z-index: 0;
-	}
+	margin: 0 auto;
+	// .container video {
+	// 	position: relative;
+	// 	z-index: 0;
+	// }
 
 	.overlay {
-		background: rgba(0,0,0,0);
+		background: rgba(0, 0, 0, 0);
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -72,10 +72,12 @@ body {
 	}
 
 	video {
-		left: 50%;
-		z-index: -100;
-		background-size: cover;
+		// left: 50%;
+		// z-index: -100;
+		// background-size: cover;
 		transition: 1s opacity;
+		margin: 0 auto;
+		display: block;
 	}
 
 	.stopfade {
@@ -95,7 +97,7 @@ body {
 
 .content {
 	max-width: $content-width;
-	padding: 10px;
+	padding: 0;
 	margin: 0 auto;
 }
 
@@ -127,9 +129,9 @@ footer {
 		position: relative;
 		text-align: center;
 		-webkit-user-select: none;
-		   -moz-user-select: none;
-		    -ms-user-select: none;
-		        user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
 		width: 3.6rem;
 	}
 	//
@@ -143,9 +145,9 @@ footer {
 		position: absolute;
 		top: 50%;
 		-webkit-transition: all 0.3s;
-		   -moz-transition: all 0.3s;
-		     -o-transition: all 0.3s;
-		        transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
 		width: 0;
 	}
 	// .icon-button:hover span {
@@ -165,9 +167,9 @@ footer {
 		position: absolute;
 		top: 0;
 		-webkit-transition: all 0.3s;
-		   -moz-transition: all 0.3s;
-		     -o-transition: all 0.3s;
-		        transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
 		width: 3.6rem;
 		z-index: 10;
 	}
@@ -175,7 +177,7 @@ footer {
 		color: black;
 	}
 	.icon-button .fa-facebook {
-		color: #3B5998;
+		color: #3b5998;
 	}
 	.icon-button .fa-map-marker {
 		color: red;
@@ -185,7 +187,6 @@ footer {
 	// // .icon-button:hover .icon-google-plus {
 	// 	color: white;
 	// }
-
 
 	font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
 	font-weight: 100;
@@ -222,7 +223,7 @@ footer {
 		color: black;
 		width: calc(100%/3);
 		padding: 30px;
-		background-color: #DCDCDC;
+		background-color: #dcdcdc;
 
 		a:link,
 		a:visited {
