@@ -1,7 +1,7 @@
 class Casalverde::Application
   config.middleware.insert_before 0,  "Rack::Cors", debug: true, logger: (-> { Rails.logger }) do
     allow do
-      origins 'localhost:3000', 'https://casalverde-react-admin.herokuapp.com/' # TODO: Add heroku endpoint here too
+      origins 'localhost:3000', 'https://casalverde-react-admin.herokuapp.com' # TODO: Add heroku endpoint here too
 
       resource '*',
         headers: :any,
