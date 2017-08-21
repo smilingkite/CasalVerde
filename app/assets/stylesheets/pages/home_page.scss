@@ -16,13 +16,11 @@
 }
 
 .reviews-container {
-	// background-color: $darker-base-color;
 	background-color: $base-color;
 	display: inline-block;
 	width: 100%;
 	margin: 5px 0 0 0;
 	max-height: 9000px;
-	// border: 1px solid $base-color;
 	text-align: center;
 	position: relative;
 }
@@ -35,16 +33,13 @@
 }
 
 .reviews-item {
-	// color: white;
 	width: calc(100%/3);
 	padding: 30px;
-	// background-color: $dark-base-color;
 	background-color: $light-base-color;
 	color: black;
 }
 
 .reviews-item:nth-child(2) {
-	// background-color: $darker-base-color;
 	background-color: $base-color;
 	color: black;
 }
