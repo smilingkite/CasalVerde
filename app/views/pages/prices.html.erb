@@ -1,7 +1,10 @@
 <% title "Kosten vakantie in in Toscane, Italie: Cas'al Verde" %>
 
-<div class="content">
-  <h2 class="headings text-align">Prices</h2>
+<div class="content" style="padding-top:80px;">
+  <h2 class="headings text-align" >Prices</h2>
+  <div class="well-row-group">
+    <span>Aankomst en vertrek alleen op zaterdag. </span>
+  </div>
   <div class="prices-container text-align">
     <% @prices.each do |price| %>
       <div class="well">
@@ -10,9 +13,7 @@
           <span><%= price.end_date %></span>
         </div>
         <% if price.saturdays_only %>
-        <div class="well-row-group">
-          <span>Aankomst en vertrek alleen op zaterdag. </span>
-        </div>
+
         <% end %>
         <div class="well-divider"></div>
         <div class="well-column-group">

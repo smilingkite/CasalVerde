@@ -15,7 +15,7 @@ class Admin::ParagraphsController < Admin::BaseController
       # redirect_to admin_page_paragraphs_path
       render status: 201, json: {
         message: 'paragraph created',
-        paragraph: paragraph
+        paragraph: @paragraph
       }.to_json
     else
       # render "index"

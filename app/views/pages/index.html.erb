@@ -5,8 +5,8 @@
   </video>
 
   <div class="overlay">
-    <h1>Cas'al Verde</h1>
-    <p>Rust, natuurlijk schoon, privacy in het hart van de beroemde Chianti regio in Toscane</p>
+    <h1>Welkom bij <br/>Cas'al Verde</h1>
+    <p>Rust, privacy & natuurlijk schoon!</p>
   </div>
 </div>
 <div class="content">
@@ -14,7 +14,7 @@
         <div class="home-text-wrapper id="home-text-wrapper">
             <% @paragraphs.each do |p| %>
             <div>
-                <h3 class="home_heading"><%= p.heading if p.heading != nil %></h3>
+                <h3 class="home_heading"  style="color:#2ba683; font-family:'Caveat', cursive; font-size:30px;"><%= p.heading if p.heading != nil %></h3>
                 <p><%= p.text%></p>
             </div>
             <% end %>
@@ -26,12 +26,10 @@
     <% @reviews.each do |r| %>
     <div class="reviews-item">
       <div class="reviews-header">
-        <p><%= r.name %></p>
       </div>
       <div class="reviews-body">
         <p>
-          <strong>Sterren:
-          </strong>
+
           <% r.stars.times do %>
           <%= image_tag 'full_star.svg', class: 'star', alt: 'full star' %>
           <% end %>
@@ -39,7 +37,8 @@
           <%= image_tag 'empty_star.svg', class: 'star', alt: 'empty star' %>
           <% end %>
         </p>
-        <p><%= r.review %></p>
+        <p><i><%= r.review %></i></p>
+        <p style="color:#2ba683; font-family:'Caveat', cursive; font-size:30px;"><%= r.name %></p>
       </div>
     </div>
     <% end %>
