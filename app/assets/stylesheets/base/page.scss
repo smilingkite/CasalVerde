@@ -1,7 +1,3 @@
-// * {
-// 	border: 1px solid red;
-// }
-
 body {
 	font-family: $font-body;
 	font-weight: $font-normal-weight;
@@ -150,7 +146,6 @@ footer {
 	background-color: #dcdcdc;
 	border: 1px solid #dcdcdc;
 	max-height: 9000px;
-	// min-height: 5em;
 
 	.wrapper {
 		max-width: $content-width;
