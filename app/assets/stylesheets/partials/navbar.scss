@@ -66,11 +66,12 @@
 		border-radius: 30px;
 		margin: 9px 0;
 		border-radius: 30px;
-		// border-bottom: ;
-		:hover,
-		:focus {
-			background-color: #2ba683 !important;
+
+		&:hover,
+		&:focus {
+			background-color: white !important;
 			text-decoration: none;
+			color: $base-color !important;
 
 			// 	box-shadow: rgb(242, 250, 220) 0px 0px 14px -3px inset;
 			// background: linear-gradient(rgb(219, 230, 196) 5%, rgb(155, 168, 146) 100%) rgb(219, 230, 196);
