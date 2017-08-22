@@ -17,13 +17,14 @@ margin: auto;
 }
 
 .reviews-container {
-	// background-color: $darker-base-color;
+
+
 	background-color: #f8f8f8;
+
 	display: inline-block;
 	width: 100%;
 	margin: 20px 0px 50px 0px;
 	max-height: 9000px;
-	// border: 1px solid $base-color;
 	text-align: center;
 	position: relative;
 }
@@ -39,17 +40,18 @@ margin: auto;
 }
 
 .reviews-item {
-	// color: white;
 	width: calc(100%/3);
 	padding: 30px;
-	// background-color: $dark-base-color;
+
 	background-color: white;
+
 	color: black;
 }
 
 .reviews-item:nth-child(2) {
-	// background-color: $darker-base-color;
+
 	background-color: white;
+
 	color: black;
 }
 

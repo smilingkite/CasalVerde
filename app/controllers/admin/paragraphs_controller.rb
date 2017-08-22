@@ -1,9 +1,6 @@
 class Admin::ParagraphsController < Admin::BaseController
   def index
-    @paragraphs = Paragraph.all.order(id: :asc)
-    @page = Page.find(params[:page_id])
-    @paragraph = Paragraph.new
-    render json: @paragraphs
+    render json: Paragraph.all.order(id: :asc)
   end
 
   def create
