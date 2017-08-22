@@ -97,13 +97,15 @@ div.page-group #paragraph_heading  {
 }
 
 div.well {
-  max-width: 300px;
+  min-width: 300px;
   padding: 10px;
   margin-bottom: 10px;
   border: 2px solid $base-color;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   justify-content: flex-end;
+  border: 2px solid bisque !important;
+  background-color: #ffffff;
 }
 div.well-row-group {
   display: flex;

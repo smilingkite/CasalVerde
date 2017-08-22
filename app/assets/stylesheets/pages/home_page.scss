@@ -7,19 +7,23 @@
 	margin: 0 auto;
 	padding: 1em;
 	text-align: left;
-	border: 1px solid white;
 }
 
 .home-text-wrapper {
 	max-height: 9000px;
 	transition: all 500ms ease-in-out;
+	width: 600px;
+margin: auto;
 }
 
 .reviews-container {
-	background-color: $base-color;
+
+
+	background-color: #f8f8f8;
+
 	display: inline-block;
 	width: 100%;
-	margin: 5px 0 0 0;
+	margin: 20px 0px 50px 0px;
 	max-height: 9000px;
 	text-align: center;
 	position: relative;
@@ -30,17 +34,24 @@
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
+	border-style: solid;
+  border-width: 4px; color:#2ba683;
+	box-shadow: 0px 0px 8px #b3b3b3;
 }
 
 .reviews-item {
 	width: calc(100%/3);
 	padding: 30px;
-	background-color: $light-base-color;
+
+	background-color: white;
+
 	color: black;
 }
 
 .reviews-item:nth-child(2) {
-	background-color: $base-color;
+
+	background-color: white;
+
 	color: black;
 }
 
