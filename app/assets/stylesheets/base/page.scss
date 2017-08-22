@@ -149,6 +149,10 @@ footer {
 		color: red;
 	}
 
+	.icon-button .fa-tripadvisor {
+		color: black;
+	}
+
 	font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
 	font-weight: 100;
 	color: white;
@@ -166,6 +170,8 @@ footer {
 		margin: 0 auto;
 		display: flex;
 		flex-wrap: wrap;
+		// widows: 80%;
+		// height: 80%;
 
 		ul {
 			margin: 0;
